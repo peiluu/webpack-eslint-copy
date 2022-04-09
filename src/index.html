@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+</head>
+
+<body>
+  <script>
+    // 初始化配置
+    (() => {
+      const system_varsion = (location.search || '').replace(/\S*dev_ver=(\d{1}\.\d{2})\S*/, '$1') || '';
+      window.SYSTEM_VERSION = system_varsion;
+    })();
+  </script>
+  <img src="./images/home.png">
+  <!-- <h1 class="h1">这是一个标题<h1> -->
+</body>
+
+</html>

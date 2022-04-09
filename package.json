@@ -1,0 +1,71 @@
+{
+	"name": "webpck-init",
+	"version": "1.0.0",
+	"templateInfo": {
+		"name": "default",
+		"typescript": true,
+		"css": "less"
+	},
+	"scripts": {
+		"build": "webpack --mode=development",
+		"dev": "webpack ./src/inex.js -o build/build.js --mode=development --watch",
+		"start": "npx webpack-dev-server",
+		"pre-commit": "lint-staged",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"src/**/*.{html,json,js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --fix",
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run eslint",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"dependencies": {
+		"-": "^0.0.1",
+		"D": "^1.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"less": "^4.1.2",
+		"query-string": "^7.1.1"
+	},
+	"devDependencies": {
+		"airbnb": "^0.0.2",
+		"babel-helpers": "^6.24.1",
+		"babel-plugin-dva-hmr": "^0.3.2",
+		"babel-plugin-import": "^1.1.0",
+		"babel-plugin-transform-runtime": "^6.22.0",
+		"babel-runtime": "^6.22.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"css-loader": "^6.7.1",
+		"eslint": "^8.13.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-loader": "^4.0.2",
+		"eslint-webpack-plugin": "^3.1.1",
+		"file-loader": "^6.2.0",
+		"html-loader": "^3.1.0",
+		"html-webpack-plugin": "^5.5.0",
+		"husky": "^7.0.4",
+		"less-loader": "^10.2.0",
+		"lint-staged": "^12.3.7",
+		"mini-css-extract-plugin": "^2.6.0",
+		"optimize-css-assets-webpack-plugin": "^6.0.1",
+		"postcss-loader": "^6.2.1",
+		"postcss-preset-env": "^7.4.3",
+		"style-loader": "^3.3.1",
+		"taro-iconfont-cli": "^3.1.1",
+		"ts-loader": "^9.2.8",
+		"typescript": "^4.6.3",
+		"url-loader": "^4.1.1",
+		"webpack": "^5.71.0",
+		"webpack-cli": "^4.9.2",
+		"webpack-dev-server": "^4.8.0"
+	},
+	"eslintConfig": {
+		"extends": "airbnb-base"
+	}
+}
