@@ -8,7 +8,6 @@ import { getCode } from '@/utils/utils.ts';
 
 import './index.less';
 
-
 // const y = (a, b) => {
 //   return a + b;
 // };
